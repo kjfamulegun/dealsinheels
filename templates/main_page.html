@@ -129,7 +129,14 @@
     <div class="col-sm-7">
 
       <div class="row">
-        <div class="col-sm-12">
+          <div class="col-sm-12">
+                <form action="." method="POST">
+                    <textarea class="form-control" name="contents" placeholder="Enter a status"></textarea>
+                    <input type="submit" value="Post status">
+                </form>
+                </div>
+
+        <!-- <div class="col-sm-12">
           <div class="panel panel-default text-left">
             <div class="panel-body">
               <p contenteditable="true">Status: Feeling Blue</p>
@@ -138,9 +145,11 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
 
+
+        </div>
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
@@ -150,7 +159,10 @@
         </div>
         <div class="col-sm-9">
           <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+            <p>{% for comment in comments %}
+               {{ comment }}
+                {% endfor %}
+                </p>
           </div>
         </div>
       </div>
@@ -163,7 +175,9 @@
         </div>
         <div class="col-sm-9">
           <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+            <p>{% for comment in comments %}
+        {{ comment }}
+{% endfor %}</p>
           </div>
         </div>
       </div>
@@ -176,7 +190,9 @@
         </div>
         <div class="col-sm-9">
           <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+            {% for comment in comments %}
+        {{ comment }}
+{% endfor %}
           </div>
         </div>
       </div>
@@ -189,7 +205,9 @@
         </div>
         <div class="col-sm-9">
           <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+            <p>{% for comment in comments %}
+        {{ comment }}
+{% endfor %}</p>
           </div>
         </div>
       </div>
