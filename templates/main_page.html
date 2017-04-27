@@ -64,8 +64,8 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Messages</a></li>
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/timeline">Timeline</a></li>
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group input-group">
@@ -104,7 +104,7 @@
     <div class="col-sm-3 well">
       <div class="well">
         <p><a href="#">My Profile</a></p>
-        <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        <img src="http://mp3teca.com/-/2014/11/Beyonce.jpg" class="img-circle" height="65" width="65" alt="Avatar">
       </div>
       <div class="well">
         <p><a href="#">Interests</a></p>
@@ -130,7 +130,7 @@
 
       <div class="row">
           <div class="col-sm-12">
-                <form action="." method="POST">
+                <form action="/addpost" method="POST">
                     <textarea class="form-control" name="contents" placeholder="Enter a status"></textarea>
                     <input type="submit" value="Post status">
                 </form>
@@ -146,78 +146,38 @@
             </div>
           </div>
         </div> -->
-      </div>
+
 
 
         </div>
+
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
-           <p>John</p>
-           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+           <p>@TheRealQueenB</p>
+           <img src="http://mp3teca.com/-/2014/11/Beyonce.jpg" class="img-circle" height="55" width="55" alt="Avatar">
           </div>
         </div>
+        {% for comment in comments %}
         <div class="col-sm-9">
           <div class="well">
-            <p>{% for comment in comments %}
-               {{ comment }}
-                {% endfor %}
+            <p>
+                {{ comment.content }}
                 </p>
           </div>
         </div>
+         {% endfor %}
       </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p>Bo</p>
-           <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>{% for comment in comments %}
-        {{ comment }}
-{% endfor %}</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p>Jane</p>
-           <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            {% for comment in comments %}
-        {{ comment }}
-{% endfor %}
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p>Anja</p>
-           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>{% for comment in comments %}
-        {{ comment }}
-{% endfor %}</p>
-          </div>
-        </div>
-      </div>
+
     </div>
+
+
     <div class="col-sm-2 well">
       <div class="thumbnail">
         <p>Upcoming Events:</p>
-        <img src="paris.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <p>Fri. 27 November 2015</p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/59/Formation_World_Tour_poster.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Formation World Tour</strong></p>
+        <p>Fri. 27 November 2016</p>
         <button class="btn btn-primary">Info</button>
       </div>
       <div class="well">
